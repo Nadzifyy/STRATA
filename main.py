@@ -440,6 +440,11 @@ async def index() -> FileResponse:
     return FileResponse(STATIC_DIR / "index.html")
 
 
+@app.get("/about", include_in_schema=False)
+async def about() -> FileResponse:
+    return FileResponse(STATIC_DIR / "about.html")
+
+
 @app.post("/api/generate-tows")
 async def generate_tows(payload: TowsRequest) -> dict:
     factors = {

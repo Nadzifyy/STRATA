@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Meet the mind behind Strata — SWOT &amp; TOWS Strategy Generator." />
+    <title>About — Strata</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+      :root { --background:#fafafa; --foreground:#0f172a; --muted:#f1f5f9; --muted-fg:#64748b; --accent:#0052ff; --accent-2:#4d7cff; --border:#e2e8f0; --card:#fff; --shadow-sm:0 1px 3px rgb(15 23 42 / .06); --shadow-md:0 4px 6px rgb(15 23 42 / .07); --shadow-xl:0 20px 25px rgb(15 23 42 / .10); }
+      * { box-sizing:border-box; }
+      html { scroll-behavior:smooth; }
+      body { margin:0; background:var(--background); color:var(--foreground); font-family:Inter,system-ui,sans-serif; }
+      button,input { font:inherit; }
+      .container { width:min(1152px,calc(100% - 40px)); margin:auto; }
+      .site-header { position:relative; overflow:hidden; padding:22px 0 46px; background:var(--foreground); color:#fff; }
+      .site-header::before { content:""; position:absolute; inset:0; opacity:.12; background-image:radial-gradient(circle,#fff 1px,transparent 1px); background-size:32px 32px; }
+      .site-header::after { content:""; position:absolute; top:-250px; right:-130px; width:600px; height:600px; border-radius:50%; background:#0052ff; filter:blur(150px); opacity:.36; }
+      .nav { display:flex; align-items:center; justify-content:space-between; position:relative; z-index:1; }
+      .brand { display:flex; gap:10px; align-items:center; color:#fff; font-weight:700; text-decoration:none; letter-spacing:-.03em; }
+      .brand-mark { display:grid; place-items:center; width:29px; height:29px; border-radius:8px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:0 4px 14px rgb(0 82 255 / .35); font-family:Calistoga,serif; }
+      .nav-note { color:#b8c3d6; font:11px "JetBrains Mono",monospace; letter-spacing:.08em; text-transform:uppercase; }
+      .nav-note a { color:inherit; text-decoration:none; }
+      .nav-note a:hover { text-decoration:underline; }
+      .hero { position:relative; z-index:1; padding:52px 0 70px; display:grid; grid-template-columns:1fr 0.9fr; gap:46px; align-items:center; }
+      .eyebrow { display:inline-flex; align-items:center; gap:10px; margin:0 0 16px; border:1px solid rgb(0 82 255 / .25); border-radius:999px; padding:8px 14px; color:var(--accent); font:500 11px/1 "JetBrains Mono",monospace; letter-spacing:.15em; text-transform:uppercase; background:rgb(0 82 255 / .05); }
+      h1,h2 { font-family:Calistoga,Georgia,serif; font-weight:400; letter-spacing:-.025em; }
+      .about-title { font-size:clamp(2.4rem,5.2vw,3.6rem); margin:0 0 14px; line-height:1.05; }
+      .about-copy { color:#c5cedd; line-height:1.8; font-size:1.08rem; margin:0; max-width:560px; }
+      .card { background:#fff; border:1px solid rgba(15,23,42,.08); border-radius:24px; box-shadow:var(--shadow-md); padding:26px; }
+      .avatar-row { display:flex; gap:16px; align-items:center; }
+      .avatar { width:74px; height:74px; border-radius:18px; object-fit:cover; box-shadow:0 10px 30px rgb(0 82 255 / .18); border:1px solid rgb(0 82 255 / .18); }
+      .name { margin:0; font-size:1.65rem; letter-spacing:-.02em; }
+      .role { margin:4px 0 0; color:var(--muted-fg); font:500 .9rem/1.4 "JetBrains Mono",monospace; text-transform:uppercase; letter-spacing:.08em; }
+      .about-body { padding:18px 0 70px; }
+      .section { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
+      .mini { background:#ffffff; border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow-sm); }
+      .mini h3 { margin:0 0 8px; font-size:1.02rem; letter-spacing:-.01em; }
+      .mini p { margin:0; color:var(--muted-fg); line-height:1.7; }
+      .primary-link { display:inline-flex; align-items:center; gap:10px; margin-top:18px; padding:10px 14px; border-radius:12px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#fff; text-decoration:none; font-weight:700; box-shadow:0 4px 14px rgb(0 82 255 / .25); }
+      .primary-link:hover { transform:translateY(-2px); }
+      @media (max-width:780px) {
+        .hero { grid-template-columns:1fr; gap:22px; padding:34px 0 50px; }
+        .about-body { padding:14px 0 50px; }
+        .section { grid-template-columns:1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav" aria-label="Main navigation">
+        <a class="brand" href="/"><span class="brand-mark">S</span> Strata</a>
+        <span class="nav-note"><a href="/about">About</a><span aria-hidden="true"> · </span>Mind behind</span>
+      </nav>
+      <div class="container hero">
+        <div>
+          <p class="eyebrow">Mind behind Strata</p>
+          <h1 class="about-title">Nadzfar A. Nasir</h1>
+          <p class="about-copy">
+            Turning ideas into smart, reliable, and impactful digital solutions.
+            I enjoy creating systems that are simple to use, scalable, and built with purpose.
+          </p>
+        </div>
+        <div class="card">
+          <div class="avatar-row">
+            <img class="avatar" src="/static/assets/avatar.png" alt="Avatar of Nadzfar A. Nasir" />
+            <div>
+              <p class="name">Nadzfar A. Nasir</p>
+              <p class="role">Builder · Systems Thinker</p>
+            </div>
+          </div>
+          <a class="primary-link" href="/"><span aria-hidden="true">←</span> Back to Generator</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="about-body">
+      <div class="container">
+        <div class="section">
+          <div class="mini">
+            <h3>Why Strata</h3>
+            <p>
+              I built Strata to help people translate their evidence into structured SWOT thinking and practical TOWS strategies—
+              with outputs you can refine over time.
+            </p>
+          </div>
+          <div class="mini">
+            <h3>Design principle</h3>
+            <p>
+              Simple, clear, and editable by default. The goal is to reduce ambiguity and keep your recommendations grounded in your inputs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
